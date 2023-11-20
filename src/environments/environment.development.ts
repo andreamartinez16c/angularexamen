@@ -1,3 +1,4 @@
 export const environment = {
-    urlApi: ""
+    apiCubos: "https://apitiendacubos2023.azurewebsites.net/"
+
 };

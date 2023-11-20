@@ -7,23 +7,33 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/create">Nuevo Personaje</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/update">Modificar personajes</a>
+            <a class="nav-link active" aria-current="page" routerLink="/">Cubos</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Series
+              Marcas
             </a>
-            <!-- <ul class="dropdown-menu">
-                <li *ngFor="let serie of series">
-                    <a class="dropdown-item" [routerLink]="['/serie', serie.idSerie]">{{ serie.nombre }}</a>
+            <ul class="dropdown-menu">
+                <li *ngFor="let marca of marcas">
+                    <a class="dropdown-item" [routerLink]="['/cuboMarca', marca]">{{ marca }}</a>
                 </li>
-            </ul> -->
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Seguridad
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a class="dropdown-item" [routerLink]="['/login']">Log In</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" [routerLink]="['/registro']">Registrarse</a>
+              </li>
+              <li>
+                <a class="dropdown-item" [routerLink]="['/cerrarsesion']">Cerrar Sesion</a>
+            </li>
+            </ul>
           </li>
         </ul>
       </div>
