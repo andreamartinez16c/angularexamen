@@ -1,1 +1,19 @@
-<p>home works!</p>
+<div>
+    <h1>Cubos</h1>
+    <table class="table table-bordered" *ngIf="cubos">
+        <thead class="table table-dark">
+            <tr>
+                <th>Nombre</th>
+                <th>Imagen</th>
+                <th>Color</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cubo of cubos">
+                <td>{{cubo.nombre}}</td>
+                <td><img src="{{cubo.imagen}}" style="width: 150px;"/></td>
+                <td>{{cubo.color}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

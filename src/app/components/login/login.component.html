@@ -1,0 +1,14 @@
+<div>
+    <h1>LogIn</h1>
+    <form (submit)="loginUser()" #loginForm="ngForm">
+        <label>Email</label>
+        <input type="text" class="form-control"
+            #cajaEmail name="cajaEmail"/>
+        <label>Password</label>
+        <input type="text" class="form-control"
+            #cajaPassword name="cajaPassword"/>
+        <button type= "submit" class="btn btn-info">
+            Log In
+        </button>
+    </form>    
+</div>

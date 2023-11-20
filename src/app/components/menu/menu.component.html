@@ -15,7 +15,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li *ngFor="let marca of marcas">
-                    <a class="dropdown-item" [routerLink]="['/cuboMarca', marca]">{{ marca }}</a>
+                    <a class="dropdown-item" [routerLink]="['/cuboMarca/' + marca]">{{ marca }}</a>
                 </li>
             </ul>
           </li>

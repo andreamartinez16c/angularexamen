@@ -1,0 +1,13 @@
+<div>
+    <h1>Detalles Cubo</h1>
+    <a class="btn btn-info" [routerLink]="['/']">Volver</a>
+    <hr>
+    <img src="{{cubo.imagen}}" style="width: 200px;"/>
+    <h1>{{cubo.nombre}}</h1>
+    <h2> {{cubo.precio}}€</h2>
+    <p>modelo: {{cubo.modelo}}</p>
+    <h3>Comentarios:</h3>
+    <div *ngFor="let comentari of comentarios">
+        <p>{{comentari.comentario}}</p>
+    </div>
+</div>

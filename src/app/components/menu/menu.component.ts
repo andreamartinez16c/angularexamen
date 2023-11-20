@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ServiceCubos } from 'src/app/services/service.cubos';
 
 @Component({
@@ -6,12 +6,12 @@ import { ServiceCubos } from 'src/app/services/service.cubos';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
 })
-export class MenuComponent {
+export class MenuComponent implements OnInit{
   public marcas !: Array<String>
   constructor(private _serviceCubos: ServiceCubos){}
   ngOnInit(): void {
-    this._serviceCubos.getMarcas().subscribe(response => {
-      this.marcas = response;
+    this._serviceCubos.getMarcas().subscribe(result => {
+      this.marcas = result;
     })
   }
 }
